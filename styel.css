@@ -1,0 +1,260 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #00008B, #FFA500);
+  height: 100%;
+  overflow-x: hidden;
+}
+.style, @font-face {
+    font-family: ''melted_monster.ttf";
+    src: url('/internal storage/download/melted_monster/Melted Monster.ttf') format('truetype');
+}
+body {
+    font-family: 'melted_monster.ttf', sans-serif;
+}
+@font-face  .style {
+    font-family: 'Windsor';
+    src: url('/path-to-your-fonts/WindsorBLT.woff2') format('woff2'),
+         url('/path-to-your-fonts/WindsorBLT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'chocky cookie', sans-serif;
+    
+}
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster"/>
+
+.menu-button {
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-weight: bold;
+ h1 {
+  font-family: 'Lobster', cursive;
+}
+
+  color: #333;
+}
+.sliding-menu {
+  position: fixed;
+  top: 70px; /* Adjust based on the size of your menu button */
+  left: 0;
+  width: 250px;
+  background: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sliding-menu.show {
+  transform: translateX(0);
+}
+
+.menu-option {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-option:hover {
+  background-color: #f5f5f5;
+}
+
+.header-banner {
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+}
+
+.header-banner h1 {
+  margin: 10px 0 0;
+  font-size: 2.5rem;
+}
+
+.header-banner p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.item {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.info-box {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.footer {
+  background-color: #00008B; /* Dark blue background */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #FFA500; /* Orange color on hover */
+}
+/* Additional styles */
+.item {
+  width: 250px;
+  height: 350px;
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255,255,255,0.2);
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.item {
+  position: relative;
+  /* Your existing styles here */
+  overflow: hidden; /* Ensure the gleam effect doesn't overflow the box */
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  top: -50%; 
+  right: -50%;
+  width: 500%; 
+  height: 500%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 25%, transparent 25.5%);
+  transform: rotate(45deg);
+  transition: opacity 0.3s, top 0.3s, right 0.3s; /* Smooth transition for the gleam movement */
+  opacity: 0; /* Start invisible */
+}
+
+.item:hover::after {
+  opacity: 1; /* Make the gleam visible on hover */
+  top: -75%; /* Move the gleam across the box */
+  right: -75%;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.info-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  max-width: 80%;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255,255,255,0.3);
+  z-index: 10;
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Update this to your stylishly unique font */
+}
+
+/* Ensure the rest of your CSS is included */
+.banner {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 51%, #1e3c72 100%);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.banner-title {
+  color: #FFA500;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Consider a more unique font here */
+}
+
+.banner-subtitle {
+  color: #FFFFFF;
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  font-family: 'Arial', sans-serif; /* Consider a more unique font here */
+}
+.banner {
+  /* Existing styles */
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  to {
+    left: 150%;
+  }
