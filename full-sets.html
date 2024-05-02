@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>full-sets page</title>
+<link rel="stylesheet" href="style.css"> <!-- Ensure you have a styles.css file -->
+</head>
+<div class="banner">
+<center>  <h1 class="banner-title">CaliDef</h1>
+  <p class="banner-subtitle">Bootloot Empire</p>
+  <h2>Full Sets</h2>
+</div>
+<body>
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/lobster_regular" />
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/lobster_italic" />
+</font-family>
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster"/>
+ <style>
+.menu-button {
+  position: fixed;
+  z-index: 1000;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #00008B 0%, #FFA500 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.menu-button:hover {
+  background: linear-gradient(135deg, #FFA500 0%, #00008B 100%);
+}
+
+.sliding-menu {
+  position: fixed;
+  top: 90px; /* Adjust based on the size of your menu button */
+  left: 0;
+  width: 250px;
+  background: linear-gradient(to right, #00008B, #FFA500);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 1000
+}
+
+.sliding-menu.show {
+  transform: translateX(0);
+}
+
+.menu-option {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #FFFFFF50;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.menu-option:hover {
+  background-color: #FFFFFF20;
+  padding-left: 20px;
+}
+</style>
+
+<button class="menu-button">Menu</button>
+<button class="menu-button" onclick="toggleMenu()">Menu</button>
+
+<div id="slidingMenu" class="sliding-menu">
+  <a href="cards.html" class="menu-option">Cards</a>
+  <a href="bootloot.html." class="menu-option">Bootloot</a>
+  <a href="full-sets.html" class="menu-option">Full Sets</a>
+  <a href="micro-cards.html" class="menu-option">Micro Cards</a>
+  <a href="custom-crafted-cards.html" class="menu-option">Custom Crafted Cards</a>
+</div>
+</div>
+    <div class="content">
+        Cards content goes here
+    </div>
+    <div class="footer">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <!-- Other social links as needed -->
+        <br>
+        <a href="index.html">Back to Main Page</a>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.sliding-menu');
+            menu.classList.toggle('show');
+        }
+        // Add more scripts here for additional functionality as needed
+    </script>
+</body>
+</html>
