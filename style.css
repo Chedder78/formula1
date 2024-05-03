@@ -99,43 +99,6 @@ body {
   gap: 20px;
   padding: 20px;
 }
-.item {
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Info box styling */
-.info-box {
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  display: none;
-  z-index: 100;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-}
-
-.info-box {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-  padding: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
 
 .footer {
   background-color: #00008B; /* Dark blue background */
