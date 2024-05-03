@@ -20,7 +20,3 @@ For buyers preferring a more personal transaction:
 ## Getting Started
 
 To view the collectibles, clone this repository and open the `index.html` file in any modern web browser.
-
-```bash
-git clone https://github.com/yourusername/CaliDef-Collectables.git
-cd CaliDef-Collectables
