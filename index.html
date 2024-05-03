@@ -76,7 +76,8 @@
   padding-left: 20px;
 }
 </style>
-<button class="menu-button">Menu</button>
+
+  <button class="menu-button">Menu</button>
 <button class="menu-button" onclick="toggleMenu()">Menu</button>
 <div id="slidingMenu" class="sliding-menu">
 <a href="cards.html" class="menu-option">Cards</a>
@@ -109,50 +110,7 @@
    <img src="https://members.tripod.com/garbage_pail_kids/images/OS1Mascot.png" alt="Collectible Card Image">
 </div>
 body {
-    .item {
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Info box styling */
-.info-box {
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  display: none;
-  z-index: 100;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-}function showInfoBox(element) {
-  var info = element.getAttribute('data-info');
-  var infoBox = document.createElement('div');
-  infoBox.className = 'info-box';
-  infoBox.innerText = info;
-  document.body.appendChild(infoBox);
-
-  // Position the info box near the item
-  var rect = element.getBoundingClientRect();
-  infoBox.style.left = `${rect.left}px`;
-  infoBox.style.top = `${rect.top + rect.height + 5}px`;
-  infoBox.style.display = 'block';
-
-  // Automatically hide the info box when clicked elsewhere
-  document.addEventListener('click', function hideInfoBox(event) {
-    if (!element.contains(event.target)) {
-      infoBox.style.display = 'none';
-      document.removeEventListener('click', hideInfoBox);
-    }
-  });
-}
-
+    .
 
 <!-- Info Box (moved to be a single, centralized box) -->
 <div id="infoBox" class="info-box">
