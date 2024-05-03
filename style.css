@@ -43,10 +43,9 @@ body {
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   font-weight: bold;
+}
  h1 {
   font-family: 'Lobster', cursive;
-}
-
   color: #333;
 }
 .sliding-menu {
