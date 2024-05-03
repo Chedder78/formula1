@@ -28,8 +28,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lobster"/> <style>
-  <style>
-.menu-button {
+
+          <style>
+
+          .menu-button {
   position: fixed;
   z-index: 1000;
   top: 20px;
@@ -45,12 +47,12 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   transition: background 0.3s ease;
 }
-          
-.menu-button:hover {
+
+          .menu-button:hover {
   background: linear-gradient(135deg, #FFA500 0%, #00008B 100%);
 }
-          
-.sliding-menu {
+
+          .sliding-menu {
   position: fixed;
   top: 90px; /* Adjust based on the size of your menu button */
   left: 0;
@@ -63,11 +65,11 @@
   border-bottom-right-radius: 15px;
   z-index: 1000
 }
-          
+
 .sliding-menu.show {
   transform: translateX(0);
 }
-          
+
 .menu-option {
   display: block;
   padding: 15px;
@@ -76,16 +78,17 @@
   border-bottom: 1px solid #FFFFFF50;
   transition: background-color 0.3s ease, padding-left 0.3s ease;
 }
-          
+
 .menu-option:hover {
   background-color: #FFFFFF20;
   padding-left: 20px;
-}   
-</style>
-          
+}
+        </style>
+ 
 <button class="menu-button">Menu</button>
 <button class="menu-button" onclick="toggleMenu()">Menu</button>
-<div id="slidingMenu" class="sliding-menu">
+
+ <div id="slidingMenu" class="sliding-menu">
   <a href="cards.html" class="menu-option">Cards</a>
   <a href="bootloot.html" class="menu-option">Bootloot</a>
   <a href="full-sets.html" class="menu-option">Full Sets</a>
