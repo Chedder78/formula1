@@ -74,26 +74,3 @@ function toggleInfo() {
         info.style.maxHeight = info.scrollHeight + "px";
     }
 }
-document.addEventListener('DOMContentLoaded', function() {
-    var img = document.getElementById('myImage');
-    var originalWidth = img.style.width; // Save the original width
-
-    img.addEventListener('click', function(event) {
-        event.stopPropagation(); // Stop the click from propagating to the document
-        img.style.width = img.style.width === originalWidth ? '400px' : originalWidth;
-    });
-
-    document.addEventListener('click', function() {
-        img.style.width = originalWidth; // Reset to original width when clicking anywhere else
-    });
-});
-
-  
-function toggleInfo() {
-    var info = document.querySelector('.additional-info');
-    if (info.style.display === 'none') {
-        info.style.display = 'block';
-    } else {
-        info.style.display = 'none';
-    }
-}
