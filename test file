@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Crafted Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <img src="https://ideogram.ai/api/images/direct/iuOMVuFdT--fn9IheUI43Q.png" alt="Banner Image">
+        <div class="center">
+            <h1 class="banner-title">CaliDef</h1>
+            <p class="banner-subtitle">The Bootloot Empire</p>
+            <h2>Custom Crafted Cards</h2>
+        </div>
+    </div>
+
+    <button class="menu-button" onclick="toggleMenu()">Menu</button>
+
+    <div id="slidingMenu" class="sliding-menu">
+        <a href="index.html" class="menu-option">Home</a>
+        <a href="cards.html" class="menu-option">Cards</a>
+        <a href="bootloot.html" class="menu-option">Bootloot</a>
+        <a href="full-sets.html" class="menu-option">Full Sets</a>
+        <a href="micro-cards.html" class="menu-option">Micro Cards</a>
+        <a href="custom-crafted-cards.html" class="menu-option">Custom Crafted Cards</a>
+    </div>
+
+    <div style="text-align: center;">
+        <div class="product-box" onclick="toggleInfo(this)">
+            <img src="https://raw.githubusercontent.com/Chedder78/Photos/main/20231105_014138.jpg" id="myImage" style="width: 400px; height: 500px;">
+            <div class="product-info">
+                <h2>Adam Bomb Padparadscha</h2>
+                <p>Click to see more details!</p>
+            </div>
+            <div class="additional-info" style="display: none;">
+                <p>Price: $49.99</p>
+                <p>Description: This gorgeous Adam Bomb Refractor has a glossy acetate front and on the back of the card, a gold 1/1 stamp.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <br>
+        <a href="index.html">Back to Main Page</a>
+    </footer>
+
+    <div>
+        <h3 style="text-align: center;">Check out our other items!</h3>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.sliding-menu');
+            menu.classList.toggle('show');
+        }
+
+        function toggleInfo(element) {
+            const info = element.querySelector('.additional-info');
+            if (info.style.display === 'none' || !info.style.display) {
+                info.style.display = 'block';
+            } else {
+                info.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
