@@ -66,4 +66,13 @@ function toggleMenu() {
       document.getElementById('infoBox').style.display = 'none';
     }
   }
+function toggleInfo() {
+    const info = document.querySelector('.additional-info');
+    if (info.style.maxHeight) {
+        info.style.maxHeight = null;
+    } else {
+        info.style.maxHeight = info.scrollHeight + "px";
+    }
+}
+
   
