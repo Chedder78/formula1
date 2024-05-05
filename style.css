@@ -216,7 +216,10 @@ body {
 }
 
 .item:hover {
-  transform: translateY(-5px);
+ transition: all 0.3s ease;
+ transform: height 500px width 300px;
+}
+
 }
 
 .info-box {
