@@ -74,15 +74,6 @@ body {
 .menu-option:hover {
   background-color: #f5f5f5;
 }
-banner {
-  hieght: 50px;
-  width: 100%;
-  box-shadow: 5px 15px;
-  position: flex;
-  border: 10px 10px 10px 10px;
-  border-color: black;
-  border-radius: 10%;
-  center-text: "Custom Crafted Styles"
 
 .header-banner, {
   text-align: center;
