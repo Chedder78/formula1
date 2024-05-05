@@ -84,7 +84,7 @@ body {
   position: fixed;      /* Fixed positioning */
   top: 0;               /* Align to the top of the page */
   left: 0;              /* Align to the left of the page */
-  background-image: url(''); /* Path to your background image */
+  background-image: url('https://www.dropbox.com/scl/fo/4mvj6d1n0gy3cf75zdpni/ABnwFRN7ky5d9-HHwe3ng9U?rlkey=axr65re3lm1evri0tbga7ikro&dl=0'); /* Path to your background image */
   background-size: cover; /* Cover the entire header */
   background-position: center; /* Center the background image */
   z-index: 1000;        /* Ensure it stays on top of other content */
