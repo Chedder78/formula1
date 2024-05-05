@@ -81,8 +81,38 @@
   background-color: #FFFFFF20;
   padding-left: 20px;
 }
+product-box {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info, .additional-info {
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+.additional-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+   </style>
 <button class="menu-button">Menu</button>
 <button class="menu-button" onclick="toggleMenu()">Menu</button>
 
@@ -117,39 +147,6 @@
             <p>Price: $99.99</p>
             <p>Description: This is a great product that helps you with XYZ...</p>
         </div>
-
-.product-box {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.product-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.product-info, .additional-info {
-    padding: 15px;
-    text-align: center;
-    background-color: white;
-}
-
-.additional-info {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-}
-   </style>
     </div>
     <div>    <!-- Cards content goes here -->
     </div>
