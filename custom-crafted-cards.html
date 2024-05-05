@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>custom crafted cards</title>
+<title>full-sets page</title>
 <link rel="stylesheet" href="style.css"> <!-- Ensure you have a styles.css file -->
 </head>
 <div class="banner">
@@ -81,38 +82,8 @@
   background-color: #FFFFFF20;
   padding-left: 20px;
 }
-product-box {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
+</style>
 
-.product-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.product-info, .additional-info {
-    padding: 15px;
-    text-align: center;
-    background-color: white;
-}
-
-.additional-info {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-}
-   
 <button class="menu-button">Menu</button>
 <button class="menu-button" onclick="toggleMenu()">Menu</button>
 
@@ -125,50 +96,23 @@ product-box {
   <a href="custom-crafted-cards.html" class="menu-option">Custom Crafted Cards</a>
 </div>
 </div>
-  </div>
-  <div class="box-content">
-    <div class="product-box" onclick="toggleInfo()">
-        <img src="https://raw.githubusercontent.com/Chedder78/Photos/main/20231105_014138.jpg" alt="Product Image" class="product-image">
-        <div class="product-info">
-            <h2>Adam Bomb Padparadscha</h2>
-            <p>Click to see more details!</p>
-        </div>
-        <div class="additional-info">
-            <p>Price: $49.99</p>
-            <p>Description: This gorgeous Adam Bomb Refractor has a glossy acetate front and on the back of the card, a gold 1/1 stamp.</p>
-        </div>
-   </div>
-   <div class="box-content">
-    <div class="product-box" onclick="toggleInfo()">
-        <img src="product-image.jpg" alt="Product Image" class="product-image">
-        <div class="product-info">
-            <h2>Product Name</h2>
-            <p>Click to see more details!</p>
-        </div>
-        <div class="additional-info">
-            <p>Price: $99.99</p>
-            <p>Description: This is a great product that helps you with XYZ...</p>
-        </div>
-    </div>
-    <div>    <!-- Cards content goes here -->
+    <div class="content">
+        Cards content goes here
     </div>
     <div class="footer">
-        <a href="https://facebook.com" target="">Facebook</a>
-        <a href="https://youtube.com" target="">Youtube</a>
-        <a href="https://instagram.com" target="">Instagram</a>
-        <a href="https://tikitok.com" target="">TikTok</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
         <!-- Other social links as needed -->
         <br>
         <a href="index.html">Back to Main Page</a>
     </div>
-   </style>
     <script>
         function toggleMenu() {
             const menu = document.querySelector('.sliding-menu');
             menu.classList.toggle('show');
         }
-        // Add more scripts here for additional functionality as needed //
-          </script> 
-          
+        // Add more scripts here for additional functionality as needed
+    </script>
 </body>
 </html>
