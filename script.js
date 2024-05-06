@@ -74,3 +74,15 @@ function toggleInfo() {
         info.style.maxHeight = info.scrollHeight + "px";
     }
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const image = document.querySelector('.card-image');
+    const infoBox = document.querySelector('.info-box');
+
+    image.onclick = function() {
+        if (infoBox.style.display === 'none') {
+            infoBox.style.display = 'block';
+        } else {
+            infoBox.style.display = 'none';
+        }
+    };
+});
