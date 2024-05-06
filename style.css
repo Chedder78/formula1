@@ -46,7 +46,9 @@ body {
 }
  h1 {
   font-family: 'Lobster', cursive;
-  color: #333;
+  color: orange;
+  text-size: 40px;
+  text-shadow: 5px 10px;
 }
 .sliding-menu {
   position: fixed;
