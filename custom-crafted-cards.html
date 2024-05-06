@@ -97,7 +97,40 @@
 </div>
 </div>
     <div class="content">
-        Cards content goes here
+
+<div class="card-container">
+    <img src="path_to_image.jpg" alt="Card Image" class="card-image">
+    <div class="info-box">
+        <p><strong>Year:</strong> 2024</p>
+        <p><strong>Series:</strong> Series Name</p>
+        <p><strong>Condition:</strong> Mint</p>
+        <p><strong>Quantity:</strong> 10</p>
+        <p><strong>Price:</strong> $200</p>
+    </div>
+</div>
+
+        <!-- Cards content goes here -->
+      .card-container {
+    position: relative;
+    width: fit-content;
+}
+
+.card-image {
+    width: 200px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.info-box {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #000;
+    padding: 10px;
+    display: none; /* Hidden by default */
+    width: 200px;
+    top: 0;
+}
+
     </div>
     <div class="footer">
         <a href="https://facebook.com" target="">Facebook</a>
