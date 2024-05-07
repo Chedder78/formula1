@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Sets Collection</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #00008B, #FFA500);
+            height: 100%;
+            overflow-x: hidden;
+        }
+        @font-face {
+            font-family: 'Lobster';
+            src: url('/path-to-your-fonts/Lobster.woff2') format('woff2'),
+                url('/path-to-your-fonts/Lobster.woff') format('woff');
+        }
+        h1 {
+            font-family: 'Lobster', cursive;
+            color: orange;
+            font-size: 4rem;
+            text-shadow: 5px 10px 5px rgba(0,0,0,0.3);
+        }
+        .banner {
+            padding: 20px 40px;
+            text-align: center;
+            position: relative;
+        }
+        .banner img {
+            width: 100px; /* Adjust size as needed */
+            position: absolute;
+            top: 10px;
+            left: 40px;
+        }
+        .set-card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%; /* Responsive width */
+            max-width: 300px;
+        }
+        .set-info {
+            list-style: none;
+            padding: 0;
+            font-size: 16px;
+        }
+        .set-info li {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 8px 0;
+        }
+        .set-info li:last-child {
+            border-bottom: none;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        footer a {
+            margin: 0 10px;
+        }
+        footer img {
+            width: 24px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="logo.png" alt="Company Logo">
+        <h1>Full Sets Collection</h1>
+    </div>
+
+    <div class="set-card">
+        <h3 class="set-title">Series XYZ</h3>
+        <ul class="set-info">
+            <li>Series Number: 001</li>
+            <li>Year: 2022</li>
+            <li>Number of Cards: 50</li>
+            <li>Condition: Mint</li>
+            <li>Price: $300</li>
+        </ul>
+    </div>
+    <!-- Repeat the .set-card block for each item in your collection -->
+
+    <footer>
+        <a href="https://www.instagram.com"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com"><img src="youtube-icon.png" alt="YouTube"></a>
+        <a href="https://www.tiktok.com"><img src="tiktok-icon.png" alt="TikTok"></a>
+        <a href="https://www.ebay.com"><img src="ebay-icon.png" alt="eBay"></a>
+    </footer>
+</body>
+</html>
