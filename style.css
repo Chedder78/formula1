@@ -48,8 +48,8 @@ body {
   font-family: 'Lobster', cursive;
   color: orange;
   text-size: 4rem;
-  text-shadow: 5px 10px;
-  color: black
+  text-shadow: black 5px 10px;
+  
 }
 .sliding-menu {
   position: fixed;
