@@ -218,13 +218,13 @@ body {
   margin-top: 10px;
   font-family: 'Arial', sans-serif; /* Consider a more unique font here */
 }
-.banner {
+.banner h1 {
   /* Existing styles */
   position: relative;
   overflow: hidden;
 }
 
-.banner::after {
+.banner::after h1 {
   position: absolute;
   top: 0;
   left: -150%;
