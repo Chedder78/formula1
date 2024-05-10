@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Our Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Original Series Complete Sets</h1>
+    <div id="products">
+        <!-- Example Product -->
+        <div class="product" data-id="1">
+            <h2>Original Series 2 set</h2>
+            <h3>Glossy Messy Tessy</h3>
+            <p>Price: $185</p>
+            <button onclick="addToCart(1)">Add to Cart</button>
+        </div>
+        <!-- Repeat for other products -->
+    </div>
+            <div class="product" data-id="2">
+            <h2>Original Series 3 set</h2>
+            <h3></h3>
+            <p>Price: $90</p>
+            <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+            <div class="product" data-id="3">
+            <h2>Original Series 3 set</h2>
+            <h3></h3>
+            <p>Price: $75</p>
+            <button onclick="addToCart(3)">Add to Cart</button>
+    </div>
+            <div class="product" data-id="4">
+            <h2>Original Series 4 set</h2>
+            <h3></h3>
+            <p>Price: $75</p>
+            <button onclick="addToCart(4)">Add to Cart</button> 
+    </div>
+            <div class="product" data-id="5">
+            <h2>Original Series 5 set</h2>
+            <h3></h3>
+            <p>Price: $75</p>
+            <button onclick="addToCart(5)">Add to Cart</button>
+    </div>
+            <div class="product" data-id="6">
+            <h2>Original Series 6 set</h2>
+            <h3></h3>
+            <p>Price: $75</p>
+            <button onclick="addToCart(6)">Add to Cart</button>
+        </div>
+        <div></div>
+    <h2>Your Cart</h2>
+    <div id="cart">
+        <p>No items in cart.</p>
+    </div>
+
+    
+<style>
+.body, .html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Adjust font family as per your original settings */
+    background: linear-gradient(to bottom right, #00008B, #FFA500); /* Dark blue to orange gradient */
+    color: white; /* Set text color to white for better visibility on dark background */
+    height: 100%;
+    overflow-x: hidden;
+}
+.product, #cart {
+    border: 2px solid white; /* White border for visibility */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+}
+
+.product h2, h3, h1, #cart h4 {
+    font-family: 'Lobster', cursive; /* Stylish font for headings */
+}
+
+.product p, #cart p {
+    font-size: 1.2rem; /* Larger font size for readability */
+}
+
+button {
+    background-color: #FFA500; /* Orange background to match the theme */
+    color: #00008B; /* Dark blue text color for contrast */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded button edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Box shadow for buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+button:hover {
+    background-color: #00008B; /* Dark blue background on hover */
+    color: #FFA500; /* Orange text on hover */
+    transform: scale(1.1); /* Slightly enlarge buttons on hover */
+}
+/* Specific styling adjustments can be added based on more detailed design requirements */
+<script src="script.js"></script>
+let cart = [];
+
+function addToCart(productId) {
+    const productNode = document.querySelector(`.product[data-id="${productId}"]`);
+    const productName = productNode.getElementsByTagName("h2")[0].innerText;
+    const productPrice = productNode.getElementsByTagName("p")[0].innerText;
+
+    /*Check if product is already in the cart*/
+    const productIndex = cart.findIndex(p => p.id === productId);
+    if (productIndex > -1) {
+        alert("This item is already in your cart.");
+        return;
+    }
+
+    /*Add product to cart array*/
+    cart.push({
+        id: productId,
+        name: productName,
+        price: productPrice,
+        quantity: 1
+    });
+
+    renderCart();
+}
+
+function removeFromCart(productId) {
+    cart = cart.filter(p => p.id !== productId);
+    renderCart();
+}
+
+function renderCart() {
+    const cartContainer = document.getElementById("cart");
+    if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>No items in cart.</p>';
+        return;
+    }
+
+    const cartHtml = cart.map(item => 
+         <div>
+            <h4>${item.name}</h4>
+            <p>${item.price} - Quantity: ${item.quantity}</p>
+            <button onclick="removeFromCart(${item.id})">Remove</button>
+        </div>`
+    ).join("");
+
+    cartContainer.innerHTML = cartHtml;
+}
+</script>
+</style>
+</body>
+</html>
