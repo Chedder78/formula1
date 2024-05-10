@@ -28,55 +28,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/lobster"/>
 </TextView>
-<style>
-.menu-button {
-  position: fixed;
-  z-index: 1000;
-  top: 20px;
-  left: 20px;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #00008B 0%, #FFA500 100%);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transition: background 0.3s ease;
-}
-.menu-button:hover {
-  background: linear-gradient(135deg, #FFA500 0%, #00008B 100%);
-}
-.sliding-menu {
-  position: fixed;
-  top: 90px; /* Adjust based on the size of your menu button */
-  left: 0;
-  width: 250px;
-  background: linear-gradient(to right, #00008B, #FFA500);
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  z-index: 1000
-}
-.sliding-menu.show {
-  transform: translateX(0);
-}
-.menu-option {
-  display: block;
-  padding: 15px;
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px solid #FFFFFF50;
-  transition: background-color 0.3s ease, padding-left 0.3s ease;
-}
-.menu-option:hover {
-  background-color: #FFFFFF20;
-  padding-left: 20px;
-}
-</style>
+
 
   <button class="menu-button">Menu</button>
 <button class="menu-button" onclick="toggleMenu()">Menu</button>
