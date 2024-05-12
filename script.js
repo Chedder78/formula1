@@ -1,14 +1,14 @@
 function toggleMenu() {
-    const menu = document.getElementById('sliding-menu'); // Corrected to use ID
-    menu.classList.toggle('show');
+    const menu = document.getElementById('.sliding-menu'); // Corrected to use ID
+    menu.classList.toggle('.show');
 }
 
 // Close the menu or info box when clicking outside
 window.onclick = function(event) {
-    const menu = document.getElementById('sliding-menu');
+    const menu = document.getElementById('.sliding-menu');
     const infoBox = document.getElementById('infoBox');
     if (!menu.contains(event.target) && !event.target.matches('.menu-button')) {
-        menu.classList.remove('show');
+        menu.classList.remove('.show');
     }
     if (!event.target.matches('.item, .item *')) {
         document.querySelectorAll('.info-box').forEach(box => {
