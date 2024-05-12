@@ -76,3 +76,10 @@ function toggleInfo() {
 }
 
   
+        function toggleMenu() {
+            const menu = document.querySelector('.sliding-menu');
+            menu.classList.toggle('show');
+    }
+}
+        // Add more scripts here for additional functionality as needed
+
