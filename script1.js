@@ -1,72 +1,53 @@
-function addGlossyEffect(element) {
-    element.classList.toggle('glossy-effect');
-}
-
-function expandBox(boxId) {
-    var box = document.getElementById(boxId);
-    var content = box.querySelector('.content');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-}
-
-function closeBox(boxId) {
-    var content = document.getElementById(boxId).querySelector('.content');
-    content.style.display = 'none';
-}
-function addGlossyEffect(element) {
-  element.classList.add('glossy-effect');
-  setTimeout(() => {
-    element.classList.remove('glossy-effect');
-  }, 2000); // Remove the glossy effect after 2 seconds
-}
-function expandBox(boxId) {
-  var box = document.getElementById(boxId);
-  var content = document.getElementById('content' + boxId);
-  if (box.style.width !== "100%") {
-    box.style.width = "100%";
-    box.style.height = "90vh"; // Adjust as needed
-    content.style.display = "block";
-  } else {
-    box.style.width = "300px"; // Original size
-    box.style.height = "200px"; // Original size
-    content.style.display = "none";
-  }
-}
-function expandBox(boxId) {
-  var box = document.getElementById(boxId);
-  var content = document.getElementById('content' + boxId);
-  box.style.width = "100%";
-  box.style.height = "90vh"; // Adjust as needed
-  content.style.display = "block";
-}
-
-function closeBox(boxId) {
-  var box = document.getElementById(boxId);
-  var content = document.getElementById('content' + boxId);
-  box.style.width = "300px"; // Original size
-  box.style.height = "200px"; // Original size
-  content.style.display = "none";
-}
 function toggleMenu() {
-  const menu = document.getElementById('sliding-Menu');
-  menu.classList.toggle('show');
+    const menu = document.getElementById('sliding-menu'); // Corrected to use ID
+    menu.classList.toggle('show');
 }
 
-// Close the menu when clicking outside
+// Close the menu or info box when clicking outside
 window.onclick = function(event) {
-  const menu = document.getElementById('sliding-Menu');
-  if (!menu.contains(event.target) && !event.target.matches('.menu-button')) {
-    menu.classList.remove('show');
-  }
-}
-function toggleMenu() {
-  const menu = document.getElementById('sliding-Menu');
-  menu.classList.toggle('show');
+    const menu = document.getElementById('sliding-menu');
+    const infoBox = document.getElementById('infoBox');
+    if (!menu.contains(event.target) && !event.target.matches('.menu-button')) {
+        menu.classList.remove('show');
+    }
+    if (!event.target.matches('.item, .item *')) {
+        document.querySelectorAll('.info-box').forEach(box => {
+            box.style.display = 'none';
+        });
+        if (infoBox) {
+            infoBox.style.display = 'none';
+        }
+    }
+};
+
+function showInfoBox(item) {
+    // Close any previously opened info boxes
+    document.querySelectorAll('.info-box').forEach(box => {
+        box.style.display = 'none';
+    });
+
+    // Get info from data attribute and update the info box
+    const info = item.getAttribute('data-info');
+    const infoContent = document.getElementById('infoContent');
+    if (infoContent) {
+        infoContent.textContent = info.replace(/, /g, '\n');
+    }
+
+    // Show and fade in the info box
+    const infoBox = document.getElementById('infoBox');
+    if (infoBox) {
+        infoBox.style.display = 'block';
+        infoBox.style.opacity = 0;
+        let opacity = 0;
+        const interval = setInterval(() => {
+            if (opacity < 1) {
+                opacity += 0.1;
+                infoBox.style.opacity = opacity;
+            } else {
+                clearInterval(interval);
+            }
+        }, 30);
+    }
 }
 
-// Close the menu when clicking outside
-window.onclick = function(event) {
-  const menu = document.getElementById('sliding-Menu');
-  if (!menu.contains(event.target) && !event.target.matches('.menu-button')) {
-    menu.classList.remove('show');
-  }
-}
+// Include this script in the <body> of your HTML, right before the closing tag.
