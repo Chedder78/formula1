@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'cursive', sans-serif;
   background: linear-gradient(to bottom right, #00008B, #FFA500);
   height: 100%;
   overflow-x: hidden;
@@ -10,9 +10,7 @@ body, html {
     font-family: ''melted_monster.ttf";
     src: url('/internal storage/download/melted_monster/Melted Monster.ttf') format('truetype');
 }
-body {
-    font-family: 'melted_monster.ttf', sans-serif;
-}
+
 @font-face  .style {
     font-family: 'Windsor';
     src: url('/path-to-your-fonts/WindsorBLT.woff2') format('woff2'),
@@ -20,11 +18,7 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
-body {
-    font-family: 'chocky cookie', sans-serif;
     
-}
 <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -215,7 +209,7 @@ body {
   color: #FFFFFF;
   font-size: 24px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  margin-top: 10px;
+  margin-top: 5px;
   font-family: 'Arial', sans-serif; /* Consider a more unique font here */
 }
 .banner h1 {
