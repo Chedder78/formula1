@@ -1,41 +1,23 @@
-function toggleMenu() {
-    const menu = document.getElementById('.sliding-menu'); // Corrected to use ID
-    menu.classList.toggle('.sliding-menu.show');
-}
-
-// Close the menu or info box when clicking outside
-window.onclick = function(event) {
-    const menu = document.getElementById('.sliding-menu');
+document.addEventListener('DOMContentLoaded', function() {
+    // Define menu and infoBox elements
+    const menu = document.querySelector('#sliding-menu');
     const infoBox = document.getElementById('infoBox');
-    if (!menu.contains(event.target) && !event.target.matches('.menu-button')) {
-        menu.classList.remove('sliding-menu.show');
+
+    // Toggle the menu visibility
+    function toggleMenu() {
+        menu.classList.toggle('show');
     }
-    if (!event.target.matches('.item, .item *')) {
+
+    // Function to show an info box with fade-in effect
+    function showInfoBox(item) {
+        // Close any previously opened info boxes
         document.querySelectorAll('.info-box').forEach(box => {
             box.style.display = 'none';
         });
-        if (infoBox) {
-            infoBox.style.display = 'none';
-        }
-    }
-};
 
-function showInfoBox(item) {
-    // Close any previously opened info boxes
-    document.querySelectorAll('.info-box').forEach(box => {
-        box.style.display = 'none';
-    });
-
-    // Get info from data attribute and update the info box
-    const info = item.getAttribute('data-info');
-    const infoContent = document.getElementById('infoContent');
-    if (infoContent) {
-        infoContent.textContent = info.replace(/, /g, '\n');
-    }
-
-    // Show and fade in the info box
-    const infoBox = document.getElementById('infoBox');
-    if (infoBox) {
+        const info = item.getAttribute('data-info');
+        document.getElementById('infoContent').textContent = info.replace(/, /g, '\n');
+        
         infoBox.style.display = 'block';
         infoBox.style.opacity = 0;
         let opacity = 0;
@@ -48,6 +30,42 @@ function showInfoBox(item) {
             }
         }, 30);
     }
-}
 
-// Include this script in the <body> of your HTML, right before the closing tag.
+    // Event delegation for closing the menu and info boxes
+    window.onclick = function(event) {
+        if (!menu.contains(event.target) && !event.target.matches('.menu-button')) {
+            menu.classList.remove('show');
+        }
+        if (!event.target.matches('.item, .item *')) {
+            document.querySelectorAll('.info-box').forEach(box => {
+                box.style.display = 'none';
+            });
+        }
+    };
+
+    // Attach event handlers to menu buttons and items
+    document.querySelectorAll('.menu-button').forEach(button => {
+        button.addEventListener('click', toggleMenu);
+    });
+
+    document.querySelectorAll('.item').forEach(item => {
+        item.addEventListener('click', function() {
+            showInfoBox(this);
+        });
+    });
+
+    // Toggle additional information display
+    function toggleInfo() {
+        const info = document.querySelector('.additional-info');
+        if (info.style.maxHeight) {
+            info.style.maxHeight = null;
+        } else {
+            info.style.maxHeight = info.scrollHeight + "px";
+        }
+    }
+
+    // Event listener for elements with class 'additional-info'
+    document.querySelectorAll('.additional-info').forEach(info => {
+        info.addEventListener('click', toggleInfo);
+    });
+});
