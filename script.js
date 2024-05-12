@@ -1,12 +1,12 @@
 
 function toggleMenu() {
-    const menu = document.getElementById('slidingMenu');
+    const menu = document.getElementById('sliding-menu');
     menu.classList.toggle('show');
   }
   
   // Close the menu when clicking outside
   window.onclick = function(event) {
-    const menu = document.getElementById('slidingMenu');
+    const menu = document.getElementById('sliding-menu');
     if (!menu.contains(event.target) && !event.target.matches('.menu-button')) {
       menu.classList.remove('show');
     }
