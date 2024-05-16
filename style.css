@@ -231,6 +231,6 @@ body, html {
 
 @keyframes shine {
   to {
-    
+    body; html;
     left: 150%; h1;
   }
