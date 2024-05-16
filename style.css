@@ -15,7 +15,7 @@ body, html {
     font-family: 'Windsor';
     src: url('/path-to-your-fonts/WindsorBLT.woff2') format('woff2'),
          url('/path-to-your-fonts/WindsorBLT.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
     
@@ -231,5 +231,6 @@ body, html {
 
 @keyframes shine {
   to {
-    left: 150%;
+    
+    left: 150%; h1;
   }
