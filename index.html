@@ -128,7 +128,47 @@
                 <div class="swiper-button swiper-button-next"></div>
                 <div class="swiper-button swiper-button-prev"></div>
             </div>
-        </div>
+     <script>
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper', {
+        slidesPerView: 3,
+        spaceBetween: 10, // Adjusted to a positive value for better layout
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+        },
+        speed: 800,
+    });
+
+    // Modal functions
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    // Close the modal when the user clicks anywhere outside of it
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal")) {
+            closeModal();
+        }
+    };
+</script>
+<script src="script.js" defer></script>
+
+   </div>
     </div>  
      </section>
      
@@ -169,45 +209,6 @@
       <a href="#" title="Twitter">Twitter</a>
       <a href="#" title="Instagram">Instagram</a>
     </div>
-  </footer>
-  
- 
-    <script>
-        var swiper = new Swiper('.swiper', {
-            slidesPerView: 3,
-            spaceBetween: -100,
-            centeredSlides: true,
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            effect: 'coverflow',
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 200,
-                modifier: 1,
-                slideShadows: true,
-            },
-            speed: 800,
-        });
-
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-        // Close the modal when the user clicks anywhere outside of it
-        window.onclick = function(event) {
-            if (event.target == document.getElementById("myModal")) {
-                closeModal();>
-            }
-        }
-
-    <script src="script.js"></script>
+</footer>
 </body>
 </html>
