@@ -1,272 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>index</title>
-<link rel="stylesheet" href="style.css"> <!-- Ensure you have a styles.css file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>It's Showtime Inc. - Audio/Video & Home Automation Experts</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<div class="banner">
-<center>  <h1 class="banner-title">CaliDef</h1>
-  <p class="banner-subtitle">The Bootloot Empire</p></center>
-</div>
 <body>
-<style>
-
-.menu-button {
-
-  position: fixed;
-
-  z-index: 1000;
-
-  top: 20px;
-
-  left: 20px;
-
-  width: 60px;
-
-  height: 60px;
-
-  background: linear-gradient(135deg, #00008B 0%, #FFA500 100%);
-
-  color: white;
-
-  border: none;
-
-  border-radius: 10px;
-
-  cursor: pointer;
-
-  font-size: 16px;
-
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-
-  transition: background 0.3s ease;
-
-}
-
-
-
-.menu-button:hover {
-
-  background: linear-gradient(135deg, #FFA500 0%, #00008B 100%);
-
-}
-
-
-
-.sliding-menu {
-
-  position: fixed;
-
-  top: 90px; /* Adjust based on the size of your menu button */
-
-  left: 0;
-
-  width: 250px;
-
-  background: linear-gradient(to right, #00008B, #FFA500);
-
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-
-  transform: translateX(-100%);
-
-  transition: transform 0.5s ease;
-
-  border-top-right-radius: 15px;
-
-  border-bottom-right-radius: 15px;
-
-  z-index: 1000;
-
-}
-
-
-
-.show {
-
-  transform: translateX(0);
-
-}
-
-
-
-.menu-option {
-
-  display: block;
-
-  padding: 15px;
-
-  color: white;
-
-  text-decoration: none;
-
-  border-bottom: 1px solid #FFFFFF50;
-
-  transition: background-color 0.3s ease, padding-left 0.3s ease;
-
-}
-
-
-
-.menu-option:hover {
-
-  background-color: #FFFFFF20;
-
-  padding-left: 20px;
-
-}
-
-</style>
-
-<button class="menu-button">Menu</button>
-<button class="menu-button" onclick="toggleMenu()">Menu</button>
-<div id="sliding-menu" class="sliding-menu">
-  <a href="index.html" class="menu-option">Home</a>
-  <a href="cards.html" class="menu-option">Cards</a>
-  <a href="bootloot.html" class="menu-option">Bootloot</a>
-  <a href="full-sets.html" class="menu-option">Full Sets</a>
-  <a href="micro-cards.html" class="menu-option">Micro Cards</a>
-  <a href="custom-crafted-cards.html" class="menu-option">Custom Crafted Cards</a>
-</div>
-</div>
-  <div class="content">
-  <!-- Item 1 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 1, Year: 1985, Price: $1,200.00, Condition: VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/OS1Mascot.png" alt="Item 1">
-  </div>
-  </div>
-  <div class="content">
-  <!-- Item 2 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 2, Year: 1985, Price: $235.00, Condition: NM-VF">
-    <img src="https://lh6.googleusercontent.com/proxy/FcQTmhxAhI5XpxV8wibh6rmFG3bWHZ9sBBtXb1olrfNxBIZ9SuuNIZ0w7NBJSbVwA6korC325Mcfb91maDyZTpaRNtj8M7wZODnB" alt="Item 2">
-  </div>
-  </div>
-  <div class="content">
-  <!-- Item 3 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 3 Year: 1986, Price: $85, Condition: NM-VF">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLPoGMUZjJR1kol2whHc6-3QY-mUyRbEUwg&usqp=CAU" alt="Item 3">
-  </div>
-  </div>
-  <div class="content">
-  <!-- Item 4 --> 
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 4, Year: 1986, Price: $70, Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US4Mascot.png" alt="Original Series 4">
-  </div>
-  </div>
-  <div class="content">
-  <!-- Item 5 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 5, Year: 1986, Price: $75, Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US5Mascot.png" alt="Original Series 5">
-  </div>
-  </div>
-  <div class="content">
-  <!-- item 6 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 6, Year: 1986, Price: $70, Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US6Mascot.png" alt="Original Series 6">
-  </div>
-  </div> 
-  <div class="content">
-    <!-- Item 7 -->
-    <div class="item" onclick="showInfoBox(this)" data-info="Series: 7, Year: 1987, Price: $90, Condition: NM-VF">
-      <img src="https://members.tripod.com/garbage_pail_kids/images/US7Mascot.png" alt="Original Series 7">
-    </div>  
-    </div>
-  <div class="content">
-  <!-- item 8 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 8, Year: 1987  , Price: $90 , Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US8Mascot.png" alt="Original Series 8">
-  </div>
-  </div> 
-  <div class="content">
-  <!-- item 9 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 9, Year: 1987, Price: $90, Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US9Mascot.png" alt="Original Series 9">
-  </div>
-  </div> 
-  <div class="content">
-  <!-- item 10 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 10, Year: 1987, Price: $100, Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US10Mascot.png" alt="Original Series 10">
-  </div>
-  </div> 
-  <div class="content">
-  <!-- item 11 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 11, Year: 1987, Price: $125, Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US11Mascot.png" alt="Original Series 11">
-  </div>
-  </div> 
-  <div class="content">
-  <!-- item 12 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 12, Year: 1988, Price: $225, Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US12Mascot.png" alt="Original Series 12">
-  </div>
-  </div> 
-  <div class="content">
-  <!-- item 13 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 13, Year: 1988, Price: $125 , Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US13Mascot.png" alt="Original Series 13">
-  </div>
-  </div> 
-  <div class="content">
-  <!-- item 14 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 14, Year: 1988, Price: $125, Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US14Mascot2.png" alt="Original Series 14">
-  </div>
-  </div> 
-  <div class="content">
-  <!-- item 15 die cut-->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 15, Year: 1988, Price: $399, Condition: NM-VF, DIE CUT SET">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US15Mascot2.png" alt="Original Series 15">
-    <p>Die Cut Set</p>
-  </div>
-  </div>
-  <div class="content">
-  <!-- item 15 non-die cut-->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 15, Year: 1988, Price: $275, Condition: NM-VF, NON-DIE CUT SET">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US15Mascot2.png" alt="Original Series 15">
-    <p>Non-Die Cut Set</p>
-  </div>
-  </div> 
-  <div class="content">
-  <!-- item 16 -->
-  <div class="item" onclick="showInfoBox(this)" data-info="Series: 16, Year: 1988* (2020), Price: $175, Condition: NM-VF">
-    <img src="https://members.tripod.com/garbage_pail_kids/images/US16Mascot2.png" alt="Original Series 16">
-  </div>
-  </div> 
- <!-- Repeat for more items, changing the data-info attribute and image source as needed -->
-</div>
-<!-- Info Box (moved to be a single, centralized box) -->
-<div id="infoBox" class="info-box">
-  <!-- item info below this here -->
-  <p id="infoContent"></p>
-</div>
-
-  <!-- Add more items here -->
-
-      <div class="content">
  
-  <!-- Your item boxes here -->
+  <!-- Header -->
+  <div>
+  <header id="header" header class="nav-visible">   
+    <div class="logo">
+      <h1>It's Showtime Inc.</h1>
+    </div>
+    <nav aria-label="Primary Navigation">
+      <ul class="nav-menu">
+        <li><a href="#about" aria-label="About Us Section">About Us</a></li>
+        <li><a href="#services" aria-label="Services Section">Services</a></li>
+        <li><a href="#portfolio" aria-label="Portfolio Section">Portfolio</a></li>
+        <li><a href="#contact" aria-label="Contact Section">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-</div>
-<div class="spacer">
+  <!-- Parallax Background -->
+  <div class="parallax">
+    <img src="parallax1.jpg" alt="Background Image 1">
+    <img src="parallax2.jpg" alt="Background Image 2" style="top: 50%;">
+  </div>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content glass-effect">
+      <h2>Your Home, Smarter and Louder</h2>
+      <p>Specializing in creating immersive experiences through cutting-edge technology and elegant design.</p>
+      <a href="#services" class="btn" aria-label="Explore Our Services">Explore Our Services</a>
+    </div>
+  </section>
 
-</div> <!-- Spacer div -->
-<footer class="footer">
-  <!-- Footer content here -->
-</footer>
+  <!-- About Us Section -->
+  <section id="about" class="about glass-effect" aria-labelledby="about-heading">
+    <h2 id="about-heading">About Us</h2>
+    <p>
+      At It's Showtime Inc., we are passionate about transforming your home into a space of innovation and elegance. From custom home theaters to seamless home automation, we bring the future to your fingertips.
+    </p>
+  </section>
 
-</div>
+  <!-- Services Section -->
+  <section id="services" class="services" aria-labelledby="services-heading">
+    <h2 id="services-heading">Our Services</h2>
+    <div class="service-item glass-effect">
+      <h3>Home Theater Installation</h3>
+      <p>Experience cinema-quality entertainment in the comfort of your home with our customized theater solutions.</p>
+    </div>
+    <div class="service-item glass-effect">
+      <h3>Audio/Video Integration</h3>
+      <p>From surround sound systems to 4K displays, we deliver high-performance solutions tailored to your needs.</p>
+    </div>
+    <div class="service-item glass-effect">
+      <h3>Home Automation</h3>
+      <p>Control lighting, security, and entertainment effortlessly with our intuitive smart home systems.</p>
+    </div>
+  </section>
 
-<div class="footer">
-  <a href="https://instagram.com" target="https://www.instagram.com/cali_def?igsh=OGQ5ZDc2ODk2ZA==">Instagram</a>
-  <a href="https://youtube.com" target="https://youtube.com/@calidef?si=uKneWLqrl_VnPk1b">YouTube</a>
-  <a href="https://facebook.com" target="https://www.facebook.com/calidef.interchange?mibextid=ZbWKwL">Facebook</a>
-  <a href="https://tiktok.com" target="https://www.tiktok.com/@calidefcustoms?_t=8mHrfuNrijG&_r=1">TikTok</a>
-</div>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio" aria-labelledby="portfolio-heading">
+    <h2 id="portfolio-heading">Our Portfolio</h2>
+    <p>Take a look at some of our recent projects showcasing our expertise and creativity.</p>
+    <div class="portfolio-gallery">
+      <figure>
+        <img src="portfolio1.jpg" alt="Custom Home Theater Project" class="glass-effect">
+        <figcaption>Custom Home Theater</figcaption>
+      </figure>
+      
+      <section>
+      <div class="container">
+      <div class="custom-body">
+        <div class="box" onclick="openModal()">
+            <h2>Open Carousel</h2>
+        </div>
+    </div>
 
-<script src="script.js"></script>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <!-- Duplicate slides to ensure loop mode works -->
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="width: 100%; height: 100%; background-color: #f4f4f4;"></div>
+                    </div>
+                </div>
+                <div class="swiper-button swiper-button-next"></div>
+                <div class="swiper-button swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>  
+     </section>
+     
+      <figure>
+        <img src="portfolio2.jpg" alt="Premium Audio System Installation" class="glass-effect">
+        <figcaption>Premium Audio System</figcaption>
+      </figure>
+      <figure>
+        <img src="portfolio3.jpg" alt="Seamless Home Automation Setup" class="glass-effect">
+        <figcaption>Seamless Home Automation</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact glass-effect" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact Us</h2>
+    <p>Ready to upgrade your home? Get in touch with us today for a consultation!</p>
+    <form action="contact.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      
+      <button type="submit" class="btn" aria-label="Send Message">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 It's Showtime Inc. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#" title="Facebook">Facebook</a>
+      <a href="#" title="Twitter">Twitter</a>
+      <a href="#" title="Instagram">Instagram</a>
+    </div>
+  </footer>
+  
+ 
+    <script>
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            spaceBetween: -100,
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            speed: 800,
+        });
+
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // Close the modal when the user clicks anywhere outside of it
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("myModal")) {
+                closeModal();>
+            }
+        }
+
+    <script src="script.js"></script>
 </body>
 </html>
